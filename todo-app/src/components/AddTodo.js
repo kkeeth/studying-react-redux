@@ -7,6 +7,7 @@ export class AddTodo extends React.Component {
   }
 
   render() {
+    const { title } = this.state;
     return (
       <div>
         <h2>AddTodo</h2>
@@ -15,13 +16,13 @@ export class AddTodo extends React.Component {
             type="text"
             name="title"
             placeholder="type title name"
-            value={this.state.title}
+            value={title}
             onChange={this.handleChange}
           />
           <input
             type="submit"
             value="Add to todo list"
-            disabled={this.state.title === ""}
+            disabled={title === ""}
           />
         </form>
       </div>
