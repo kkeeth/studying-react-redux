@@ -13,6 +13,7 @@ export class AddTodo extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
+            name="title"
             placeholder="type title name"
             value={this.state.title}
             onChange={this.handleChange}
@@ -30,7 +31,9 @@ export class AddTodo extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    if (e.currentTarget.title) return;
+    if (e.target.title.value === "") {
+      return;
+    }
     this.props.addTodo(this.state.title);
     this.setState({ title: "" });
   };
