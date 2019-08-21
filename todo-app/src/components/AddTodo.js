@@ -18,7 +18,11 @@ export class AddTodo extends React.Component {
             value={this.state.title}
             onChange={this.handleChange}
           />
-          <input type="submit" value="Add to todo list" />
+          <input
+            type="submit"
+            value="Add to todo list"
+            disabled={this.state.title === ""}
+          />
         </form>
       </div>
     );
