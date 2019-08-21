@@ -13,9 +13,9 @@ class H2O extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.H2OState(this.state.temp)}>
         <h2>
-          phase: {this.H2OState(this.state.temp)}, {this.state.temp} ℃
+          phase: {this.H2OState(this.state.temp)} : {this.state.temp} ℃
         </h2>
         <button onClick={this.onPlusClick}>+</button>
         <button onClick={this.onMinusClick}>-</button>
