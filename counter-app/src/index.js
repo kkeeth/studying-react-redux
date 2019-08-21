@@ -1,5 +1,11 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 import { createStore } from "redux";
 import reducer from "./reducer";
+
+import { Provider } from "react-redux";
+import App from "./App";
 
 const store = createStore(reducer);
 
@@ -7,23 +13,10 @@ store.subscribe(() => {
   console.log(store.getState());
 });
 
-store.dispatch({ type: "PLUS", payload: { num: 1 } });
-store.dispatch({ type: "PLUS", payload: { num: 10 } });
-store.dispatch({ type: "MINUS", payload: { num: 1 } });
-store.dispatch({ type: "MINUS", payload: { num: 10 } });
-// import React from "react";
-// import ReactDOM from "react-dom";
-
-// import "./styles.css";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>Hello CodeSandbox</h1>
-//       <h2>Start editing to see some magic happen!</h2>
-//     </div>
-//   );
-// }
-
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
