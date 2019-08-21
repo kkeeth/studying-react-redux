@@ -28,6 +28,7 @@
   ],
   "prettier": {
     "bracketSpacing": true,
-    "jsxBracketSameLine": false
+    "jsxBracketSameLine": false,
+    "semi": true
   }
 }

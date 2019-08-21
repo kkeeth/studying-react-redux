@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export class List extends React.Component {
   constructor(props) {
@@ -6,13 +6,17 @@ export class List extends React.Component {
   }
 
   render() {
-    const list = this.props.todos.map((todo) => {
-      return <li>#{ todo.id }: { todo.title }</li>
-    })
+    const list = this.props.todos.map(todo => {
+      return (
+        <li>
+          #{todo.id}: {todo.title}
+        </li>
+      );
+    });
     return (
       <div>
         <h2>List</h2>
-        <ul>{ list }</ul>
+        <ul>{list}</ul>
       </div>
     );
   }
