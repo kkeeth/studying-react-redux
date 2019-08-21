@@ -10,12 +10,13 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
+    "onchange": "^6.0.0",
     "prettier": "^1.18.2",
     "typescript": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "format": "prettier --write src/**",
+    "watch": "onchange 'src/**/*.*' -- prettier --write {{changed}}",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

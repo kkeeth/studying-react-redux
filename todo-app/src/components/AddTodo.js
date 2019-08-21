@@ -30,6 +30,7 @@ export class AddTodo extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (e.currentTarget.title) return;
     this.props.addTodo(this.state.title);
     this.setState({ title: "" });
   };
