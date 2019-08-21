@@ -1,5 +1,16 @@
+body {
+  color: yellow;
+}
+.ice {
+  background: #1ab7ea;
+}
+.water {
+  background: #0084ff;
+}
+.steam {
+  background: #df2029;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
 }
-
