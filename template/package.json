@@ -10,14 +10,24 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
+    "prettier": "^1.18.2",
     "typescript": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
+    "format": "prettier --write src/**/*",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "prettier": {
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true
+  }
 }
-
