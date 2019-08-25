@@ -1,6 +1,15 @@
 import React from "react";
 
-const App = ({ number, title, day, plus, minus, asyncPlus, asyncMinus }) => (
+const App = ({
+  number,
+  title,
+  day,
+  plus,
+  minus,
+  asyncPlus,
+  asyncMinus,
+  getJson
+}) => (
   <div>
     <h2>
       App {number} : {title} : {day}
@@ -32,6 +41,13 @@ const App = ({ number, title, day, plus, minus, asyncPlus, asyncMinus }) => (
       }}
     >
       async -10
+    </button>
+    <button
+      onClick={() => {
+        getJson();
+      }}
+    >
+      get json
     </button>
   </div>
 );
