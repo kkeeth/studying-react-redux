@@ -4,7 +4,9 @@ import { plus, minus } from "../actions";
 
 const mapStateToProps = state => {
   return {
-    number: state
+    number: state.number,
+    title: state.title,
+    day: state.day
   };
 };
 
