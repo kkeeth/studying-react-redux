@@ -2,4 +2,4 @@ import { combineReducers } from "redux";
 
 import imageUrls from "./imageUrls";
 
-export default combineReducers({});
+export default combineReducers({ imageUrls });
