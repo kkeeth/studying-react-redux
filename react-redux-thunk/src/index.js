@@ -8,6 +8,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import rootReducer from "./reducers";
+import giphyAPI from "./APIs/giphyAPI";
 
 const store = createStore(rootReducer);
 
@@ -18,3 +19,7 @@ ReactDOM.render(
   </Provider>,
   rootElement
 );
+
+giphyAPI("dog").then(res => {
+  console.log(res.data.data);
+});
