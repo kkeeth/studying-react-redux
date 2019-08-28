@@ -22,6 +22,8 @@ class Search extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    const { getUrls } = this.props;
+    getUrls(this.state.title);
     this.setState({ title: "" });
   };
 }

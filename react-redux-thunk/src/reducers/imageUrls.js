@@ -1,6 +1,4 @@
-const initialState = [1, 2, 3, 4, 5];
-
-const imageUrls = (state = initialState, action) => {
+const imageUrls = (state = [], action) => {
   switch (action.type) {
     case "RECEIVE_DATA":
       return action.payload;

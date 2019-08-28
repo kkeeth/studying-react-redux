@@ -3,8 +3,7 @@ import React from "react";
 const ImageList = ({ urlList }) => {
   const list = urlList.map(url => {
     return (
-      <li key={url}>
-        {url}
+      <li className="list" key={url}>
         <img src={url} alt="" />
       </li>
     );
