@@ -3,6 +3,35 @@ body {
   background: wheat;
 }
 
+.search {
+  margin: 20px auto;
+}
+
+.search input[type='text'] {
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 5px;
+}
+.search input[type='submit'] {
+  border-radius: 12px;
+  padding: 6px 12px;
+  border-bottom: solid 3px #627295;
+}
+.search input[type='submit']:active {
+  -webkit-transform: translateY(3px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+.search input[type='submit']:focus {
+  outline: none;
+}
+
+.search input[type='submit']:hover {
+  cursor: pointer;
+}
+
 .list {
   height: 100vh;
   display: flex;

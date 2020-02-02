@@ -8,9 +8,12 @@ class Search extends React.Component {
   render() {
     const { buttonText } = this.props;
     return (
-      <div>
+      <div className="search">
         <form onSubmit={this.handleSubmit}>
-          <input value={this.state.title} onChange={this.handleChange} />
+          <input
+            type="text"
+            placeholder="please type any words"
+            value={this.state.title} onChange={this.handleChange} />
           <input type="submit" value={buttonText} />
         </form>
       </div>
